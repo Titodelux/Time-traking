@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="containerData">
+      <div class="user">
+        <div class="userInfo">
+          <img src="./images/image-jeremy.png" alt="">
+          <p class="weightTittle"> Report for
+            <span class="weightSubtittle"> Jeremy Robson</span></p>
+        </div>
+        <ul class="userTime">
+          <li><button class="button">Daily</button></li>
+          <li><button class="button">Weekly</button></li>
+          <li><button class="button">Monthly</button></li>
+        </ul>
+      </div>
+      <div class="data">
+        <section class="dailyData">
+          <section class="cardData">
+            <div class="cardInfo">
+              <p>Work</p>
+              <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+              <p class="time">5hrs</p>
+              <p class="previousTime">Last day - 7hrs</p>
+            </div>
+          </section>
+          <section class="cardData">
+            <div class="cardInfo">
+              <p>Play</p>
+              <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+              <p class="time">1hrs</p>
+              <p class="previousTime">Last day - 2hrs</p>
+            </div>
+          </section>
+          <section class="cardData">
+            <div class="cardInfo">
+              <p>Study</p>
+              <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+              <p class="time">0hrs</p>
+              <p class="previousTime">Last day - 1hrs</p>
+            </div>
+          </section>
+          <section class="cardData">
+            <div class="cardInfo">
+              <p>Exercise</p>
+              <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+              <p class="time">1hrs</p>
+              <p class="previousTime">Last day - 1hrs</p>
+            </div>
+          </section>
+          <section class="cardData">
+            <div class="cardInfo">
+              <p>Social</p>
+              <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+              <p class="time">1hrs</p>
+              <p class="previousTime">Last day - 3hrs</p>
+            </div>
+          </section>
+          <section class="cardData">
+            <div class="cardInfo">
+              <p>Self Care</p>
+              <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+              <p class="time">0hrs</p>
+              <p class="previousTime">Last day - 1hrs</p>
+            </div>
+          </section>
+        </section>
+        <section class="weeklyData">
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Work</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">32hrs</p>
+            <p class="previousTime">Last week - 36hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Play</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">10hrs</p>
+            <p class="previousTime">Last week - 8hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Study</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">4hrs</p>
+            <p class="previousTime">Last week - 7hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Exercise</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">4hrs</p>
+            <p class="previousTime">Last week - 5hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Social</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">5hrs</p>
+            <p class="previousTime">Last week - 10hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Self Care</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">2hrs</p>
+            <p class="previousTime">Last week - 2hrs</p>
+          </div>
+        </section>
+        </section>
+        <section class="monthlyData">
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Work</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">103hrs</p>
+            <p class="previousTime">Last month - 128hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Play</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">23hrs</p>
+            <p class="previousTime">Last month - 29hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Study</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">13hrs</p>
+            <p class="previousTime">Last month - 19hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Exercise</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">11hrs</p>
+            <p class="previousTime">Last month - 18hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Social</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">21hrs</p>
+            <p class="previousTime">Last month - 23hrs</p>
+          </div>
+        </section>
+        <section class="cardData">
+          <div class="cardInfo">
+            <p>Self Care</p>
+            <div class="img"><img src="./images/icon-ellipsis.svg" alt="menu"></div>
+            <p class="time">7hrs</p>
+            <p class="previousTime">Last month - 11hrs</p>
+          </div>
+        </section>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
