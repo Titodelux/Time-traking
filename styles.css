@@ -128,31 +128,23 @@ span::before { content: '\A'; white-space: pre;}
 .data {
     position: relative;
     overflow: hidden;
-    height: 950px;
+    min-height: 950px;
     border-radius: 1em;
-
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* column-gap: 1em; */
-
-    /* background-color: red; */
 }
 
 .data .dailyData{
-    width: 100%;
+    /* width: 100%; */
     position: absolute; 
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1em;
     transform: translateX(-100%);
     transition: transform 0.5s;
 }
 
 .data .weeklyData{
-    width: 100%;
+    /* width: 100%; */
     position: absolute; 
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1em;
     transition: transform 0.7s;
 
@@ -160,14 +152,91 @@ span::before { content: '\A'; white-space: pre;}
 }
 
 .data .monthlyData{
-    width: 100%;
+    /* width: 100%; */
     position: absolute; 
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1em;
     transform: translateX(100%);
     transition: transform 0.9s;
 
+}
+
+@media (min-width: 1440px) {
+
+    .container{
+        min-height: 100vh;
+        width: 100vw;
+    }
+    .containerData{
+        height: 400px;
+        flex-direction: row;
+        margin: 5em;
+    }
+
+    .user{
+        /* height: 100%; */
+        width: 200px;
+    }
+    .userInfo{
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .userInfo span{
+        font-size: 2.5em;
+    }
+    .userTime{
+        padding: 0em 1em;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    
+    .data{
+        height: 100%;
+        width: 700px;
+
+    }
+    .dailyData{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 700px;
+
+    }
+    .weeklyData{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 700px;
+
+    }
+    .monthlyData{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 700px;
+
+    }
+
+    .cardInfo{
+        grid-template-areas: "card menu"
+        "time time"
+        "previous previous";
+    }
+
+    .cardInfo p:nth-child(1){
+        grid-area: card;
+    }
+
+    .cardInfo p:nth-child(3){
+        grid-area: time;
+        font-size: 3em!important;
+        justify-content: left!important;
+    }
+    .cardInfo p:nth-child(4){
+        grid-area: previous;
+        justify-content: left!important;
+    }
 }
 
 section{
