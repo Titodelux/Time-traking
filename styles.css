@@ -69,11 +69,10 @@ li{
 
 
 .container{
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     background-color: var(--Very_dark_blue);
     
 }
@@ -161,84 +160,6 @@ span::before { content: '\A'; white-space: pre;}
 
 }
 
-@media (min-width: 1440px) {
-
-    .container{
-        min-height: 100vh;
-        width: 100vw;
-    }
-    .containerData{
-        height: 400px;
-        flex-direction: row;
-        margin: 5em;
-    }
-
-    .user{
-        /* height: 100%; */
-        width: 200px;
-    }
-    .userInfo{
-        height: 70%;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .userInfo span{
-        font-size: 2.5em;
-    }
-    .userTime{
-        padding: 0em 1em;
-        flex-direction: column;
-        gap: 0.5em;
-    }
-    
-    .data{
-        height: 100%;
-        width: 700px;
-
-    }
-    .dailyData{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        width: 700px;
-
-    }
-    .weeklyData{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        width: 700px;
-
-    }
-    .monthlyData{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        width: 700px;
-
-    }
-
-    .cardInfo{
-        grid-template-areas: "card menu"
-        "time time"
-        "previous previous";
-    }
-
-    .cardInfo p:nth-child(1){
-        grid-area: card;
-    }
-
-    .cardInfo p:nth-child(3){
-        grid-area: time;
-        font-size: 3em!important;
-        justify-content: left!important;
-    }
-    .cardInfo p:nth-child(4){
-        grid-area: previous;
-        justify-content: left!important;
-    }
-}
-
 section{
     border-radius: 1em;
 }
@@ -306,6 +227,11 @@ section{
     color: var(--Pale_Blue);
 }
 
+.cardInfo:hover{
+    /* background-color: hsl(239, 38%, 33%); */
+    filter: brightness(120%);
+}
+
 .cardInfo p:nth-child(1){
     display: flex;
     justify-content: left;
@@ -320,7 +246,15 @@ section{
     display: flex;
     align-items: center;
     justify-content: right;
-    /* background-color: red; */
+}
+.cardInfo .img svg:hover{
+    cursor: pointer;
+
+}
+.cardInfo .img svg:hover path{
+    /* fill: black; */
+    filter: brightness(150%);
+    /* filter: saturate(150%); */
 }
 
 .cardInfo p:nth-child(3){
@@ -341,4 +275,119 @@ section{
     align-items: center;
     /* background-color: red; */
 
+}
+
+@media (min-width: 960px) {
+
+    .container{
+        min-height: 100vh;
+        width: 100vw;
+    }
+    .containerData{
+        height: 400px;
+        flex-direction: row;
+        margin: 5em;
+    }
+
+    .user{
+        /* height: 100%; */
+        width: 200px;
+    }
+    .userInfo{
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .userInfo span{
+        font-size: 2.5em;
+    }
+    .userTime{
+        padding: 0em 1em;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    
+    .data{
+        min-height: 100%;
+        width: 700px;
+
+    }
+    .dailyData{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 700px;
+
+    }
+    .weeklyData{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 700px;
+
+    }
+    .monthlyData{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 700px;
+
+    }
+
+    .cardInfo{
+        grid-template-areas: "card menu"
+        "time time"
+        "previous previous";
+    }
+
+    .cardInfo p:nth-child(1){
+        grid-area: card;
+    }
+
+    .cardInfo p:nth-child(3){
+        grid-area: time;
+        font-size: 3em!important;
+        justify-content: left!important;
+    }
+    .cardInfo p:nth-child(4){
+        grid-area: previous;
+        justify-content: left!important;
+    }
+}
+
+@media (min-width: 592px) and (max-width: 960px) {
+    .data{
+        min-height: 600px;
+    }
+    .containerData{
+        width: 70%;
+    }
+    .dailyData{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .weeklyData{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .monthlyData{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .cardInfo{
+        grid-template-areas: "card menu"
+        "time time"
+        "previous previous";
+    }
+
+    .cardInfo p:nth-child(1){
+        grid-area: card;
+    }
+
+    .cardInfo p:nth-child(3){
+        grid-area: time;
+        font-size: 3em!important;
+        justify-content: left!important;
+    }
+    .cardInfo p:nth-child(4){
+        grid-area: previous;
+        justify-content: left!important;
+    }
 }
